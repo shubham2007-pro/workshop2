@@ -1,48 +1,244 @@
+:root {
+    --header-h: 115px;
+}
+
+html {
+    scroll-padding-top: var(--header-h);
+}
+
 *{
 	font-family:sans-serif,serif,monospace;
 	margin: 0;
 	padding: 0;
-
 }
+
 body{
+	scroll-behavior: smooth;
 	color: white;
-	text-decoration: none;
-	width: 100%;
 	background-color: #000021;
-
 }
+
+header h3{
+	font-size: 1.5rem;
+}
+
 header{
 	color: white;
 	padding: 1.5rem 10%;
-	background-color: #12123E;
+	background-color: #000021;
 	justify-content: space-between;
 	display: flex;
 	position: sticky;
-	top:0;
-	z-index:100;
-
-}
-#vid{
-	position: fixed;
 	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-	z-index: -1;
+	z-index: 100;
 }
+
+#vid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(5px);
+}
+
 nav{
 	display: flex;
-	gap:40px;
-
-
+	gap: 45px;
 }
+
 nav a{
 	text-decoration: none;
 	color: white;
-	font-size: 1.2rem;
-	font: bold;
+	font-size: 1.5rem;
+}
+nav a.active {
+  border-bottom: 2px solid white;
+}
+nav a:hover{
+	transform: scale(1.2);
+	background-color: #12123E;
+	outline: 0.8px solid white;
+	transition: 0.2s;
+	border-radius: 0.5rem;
 }
 
+#about{
+	height: 40rem;
+}
 
+#abt-con{
+	position: relative;
+	margin-top: 10rem;
+}
 
+#hi{
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-left: 10rem;
+}
+
+#love{
+	font-size: 1.4rem;
+	text-align: justify;
+	width: 40rem;
+	margin-left: 10rem;
+}
+
+#profile{
+	position: absolute;
+	top:0rem;
+	right: 12rem;
+	height: 21rem;
+	width: 21rem;
+	border-radius: 50rem;
+}
+
+.download, .git {
+	border-radius: 7rem;
+	height: 4rem;
+	width: 15rem;
+	background-color: #000021;
+	border: 2px solid white;
+	color: white;
+	font-size: 1rem;
+	margin-top: 2rem;
+}
+
+.download{
+	margin-left: 10rem;
+}
+
+.git{
+	margin-left: 2rem;
+}
+
+.download:hover, .git:hover{
+	transform: scale(1.04);
+	background-color: #12123E;
+	transition: 0.2s;
+}
+
+.projects-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	width: 90%;
+	margin: auto;
+}
+
+/* PROJECT ITEM WRAPPER */
+.projects-container .project {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* IMAGE INSIDE */
+.projects-container .project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* HOVER EFFECT ON WHOLE CARD */
+.projects-container .project:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+#projects h1{
+	position: absolute;
+	left: 10rem;
+	bottom:-5rem;
+	font-weight: 700;
+}
+
+.me{
+	text-align: center;
+	background-color: #000021;
+	height: 25rem;
+	width: 40rem;
+	position: relative;
+	left: 29rem;
+	margin-top: 8rem;
+	border-radius: 20px;
+}
+
+#any{
+	position: relative;
+	top: 10rem;
+	right: 12.5rem;
+}
+
+#btn{
+	border-radius: 7rem;
+	height: 3rem;
+	width: 10rem;
+	background-color: #000021;
+	border: 2px solid white;
+	color: white;
+	position: absolute;
+	bottom: 3rem;
+	left:14rem;
+}
+
+#btn:hover{
+	transform: scale(1.1);
+	background-color: #12123E;
+	transition: 0.2s;
+}
+
+#contact h2{
+	position: absolute;
+	left: 10rem;
+	font-weight: 700;
+}
+
+#na, #em, #mes{
+	width: 17rem;
+	height: 2rem;
+	margin-left: 8rem;
+	margin-bottom: 2rem;
+	border: none;
+	outline: none;
+	border-bottom: 0.1rem solid white;
+	color: white;
+	background-color: #000021;
+}
+
+#na:focus, #em:focus, #mes:focus { 
+	outline: none; 
+}
+
+.or{
+	margin-left: 10rem;
+	margin-top: 2rem;
+}
+
+#insta, #face, #x, #link {
+	width: 2rem;
+	height: 2rem;
+}
+
+#name{
+ 	font-size: 1.3rem;
+  margin-right: 6rem; 
+} 
+#email{ 
+	margin-right: 6rem;
+	font-size: 1.3rem; 
+} 
+#message{
+ 	margin-right: 4rem; 
+	font-size: 1.3rem; 
+}
+
+footer{
+	text-align: center;
+}
